@@ -17,5 +17,5 @@ ax.plot(x,y)
 
 st.pyplot(fig)
 
-st.markdown('deployed by git actions!!')
+st.markdown('deployed by git actions!')
 
