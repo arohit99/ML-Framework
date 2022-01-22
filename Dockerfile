@@ -10,6 +10,8 @@ RUN pip install -r requirements.txt
 # Add our code
 COPY . /rootdir
 WORKDIR /rootdir
+EXPOSE 8501
 
 # Run the image
 CMD streamlit run --server.port $PORT ./src/app.py
+#CMD streamlit run ./src/app.py

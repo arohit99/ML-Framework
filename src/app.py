@@ -7,15 +7,14 @@ plt.style.use('fivethirtyeight')
 
 st.title('ML Framework')
 
-#df = pd.DataFrame({'x':range(1,100), 'y':3*(range(1,100)+5)})
-x= list(range(1,101))
-y=  [(3 * i) + 5 for i in x]
+input_file_path = './data/raw_data/CustomerChurn.csv'
 
-st.subheader('Sample Plot')
-fig,ax = plt.subplots(figsize=(8,5))
-ax.plot(x,y)
+df = pd.read_csv(input_file_path)
 
-st.pyplot(fig)
 
-st.markdown('deployed by git actions!')
+st.subheader('raw data')
+
+st.dataframe(df)
+
+st.markdown('Execution complete')
 

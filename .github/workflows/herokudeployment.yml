@@ -1,10 +1,10 @@
 name: Build Docker image and deploy to Heroku
 
-on:
+on: workflow_dispatch
   # Trigger the workflow on push or pull request,
   # but only for the main branch
-  push:
-    branches: main
+  # push:
+  #   branches: main
 jobs:
   build:
     runs-on: ubuntu-latest
