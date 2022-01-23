@@ -41,25 +41,25 @@ def run_model():
         model_metrics = model_obj.get_model_metrics()
         modelview = ModelMetrics(model_metrics)
         
-        # logger.info(f'confusion_matrix: {model_metrics["confusion_matrix"]}')
-        # logger.info(f'classification_report: {model_metrics["classification_report"]}')
-        # logger.info(f'cross_val_scores :{model_metrics["cross_val_scores"]}')
+        logger.info(f'confusion_matrix: {model_metrics["confusion_matrix"]}')
+        logger.info(f'classification_report: {model_metrics["classification_report"]}')
+        logger.info(f'cross_val_scores :{model_metrics["cross_val_scores"]}')
 
-        # mlflow.log_metric("accuracy_score", model_metrics["accuracy_score"])
-        # mlflow.log_metric("roc_auc_score", model_metrics["roc_auc_score"])
+        mlflow.log_metric("accuracy_score", model_metrics["accuracy_score"])
+        mlflow.log_metric("roc_auc_score", model_metrics["roc_auc_score"])
 
-        # true_positive = model_metrics["confusion_matrix"][0][0]
-        # true_negative = model_metrics["confusion_matrix"][1][1]
-        # false_positive = model_metrics["confusion_matrix"][0][1]
-        # false_negative = model_metrics["confusion_matrix"][1][0]
+        true_positive = model_metrics["confusion_matrix"][0][0]
+        true_negative = model_metrics["confusion_matrix"][1][1]
+        false_positive = model_metrics["confusion_matrix"][0][1]
+        false_negative = model_metrics["confusion_matrix"][1][0]
 
-        # mlflow.log_metric("true_positive", true_positive)
-        # mlflow.log_metric("true_negative", true_negative)
-        # mlflow.log_metric("false_positive", false_positive)
-        # mlflow.log_metric("false_negative", false_negative)
-        # # mlflow.log_metric("cross_val_scores", model_metrics["cross_val_scores"])
+        mlflow.log_metric("true_positive", true_positive)
+        mlflow.log_metric("true_negative", true_negative)
+        mlflow.log_metric("false_positive", false_positive)
+        mlflow.log_metric("false_negative", false_negative)
+        # mlflow.log_metric("cross_val_scores", model_metrics["cross_val_scores"])
 
-        # mlflow.sklearn.log_model(model, "model")
+        mlflow.sklearn.log_model(model, "model")
         mlflow.end_run() 
         return logger,dataview,plotview,modelview
     except Exception as e:
