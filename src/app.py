@@ -15,6 +15,7 @@ from pages import DataView,PlotView,ModelMetrics
 
 plt.style.use('fivethirtyeight')
 
+@st.cache
 def run_model():
        
     try:
