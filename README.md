@@ -15,7 +15,8 @@ $ heroku open
 ```
 
 ```bash
-$ docker run -it -p 8501:8501 --name MLApp app:v3
+$ docker build -t app:latest .
+$ docker run -it -p 8501:8501 --name MLApp app:latest
 ```
 
 check: http://localhost:8501/

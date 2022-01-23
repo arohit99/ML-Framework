@@ -1,0 +1,36 @@
+version: 1
+formatters:
+    minimal: {"format": "%(message)s"}
+    detailed: {
+            "format": "%(levelname)s %(asctime)s [%(filename)s:%(funcName)s:%(lineno)d]\n%(message)s\n"
+        }
+handlers:
+    console: {
+            "class": "logging.StreamHandler",
+            "stream": ext://sys.stdout,
+            "formatter": "minimal",
+            "level": DEBUG,
+        }
+    info: {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": "info.log",
+            "maxBytes": 10485760,  # 1 MB
+            "backupCount": 10,
+            "formatter": "detailed",
+            "level": INFO,
+        }
+    error: {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": "error.log",
+            "maxBytes": 10485760,  # 1 MB
+            "backupCount": 10,
+            "formatter": "detailed",
+            "level": ERROR,
+        }
+loggers:
+    root: {
+            "handlers": ["console", "info", "error"],
+            "level": DEBUG,
+            "propagate": True,
+        }
+

@@ -1,0 +1,19 @@
+data:
+       file_path: 'data/raw_data/CustomerChurn.csv'
+
+       x_cols: ['tenure', 'MultipleLines', 'InternetService',
+              'OnlineSecurity', 'OnlineBackup', 'DeviceProtection', 'TechSupport',
+              'StreamingTV', 'StreamingMovies', 'Contract', 'PaymentMethod',
+              'MonthlyCharges', 'TotalCharges', 'isGenderMale', 'isSeniorCitizen',
+              'hasPartner', 'hasDependents', 'hasPhoneService', 'hasPaperlessBilling']
+       y_col: ['isChurned']
+       x_numeric: ['tenure','MonthlyCharges','TotalCharges']
+       model_path: 'model/model.pkl'
+
+grid_search:
+       params_grid: { 
+    'model__n_estimators': [200, 500],
+    'model__max_features': ['auto', 'sqrt', 'log2'],
+    'model__max_depth' : [4,5,6,7,8],
+    'model__criterion' :['gini', 'entropy']
+       }

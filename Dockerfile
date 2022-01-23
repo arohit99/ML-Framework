@@ -19,9 +19,6 @@ ENV PYTHONPATH=${PYTHONPATH}:${PROJECT_HOME}
 #RUN export PATH="$PATH:$PWD"
 WORKDIR /ProjectRootDir
 
-RUN echo "pwd $PWD"
-RUN echo "PATH $PATH"
-
 # Install dependencies
 RUN pip install -r requirements.txt
 
