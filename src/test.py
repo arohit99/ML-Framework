@@ -7,3 +7,7 @@ if PROJECTPATH not in sys.path:
     sys.path.append(PROJECTPATH)
 
 print(sys.path)
+
+import streamlit as st
+
+st.title('Customer Churn Model')
