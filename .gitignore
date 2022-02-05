@@ -4,6 +4,9 @@ __pycache__/
 *$py.class
 
 mlfrvenv/
+mlruns/
+logs/
+
 
 # C extensions
 *.so
