@@ -1,5 +1,5 @@
 # Grab the Python base image
-FROM python:3.8
+FROM python:3.7
 
 # Install python and pip
 # COPY requirements.txt ./requirements.txt
@@ -23,5 +23,5 @@ WORKDIR /ProjectRootDir
 RUN pip install -r requirements.txt
 
 # Run the image
-CMD streamlit run --server.port $PORT ./src/app.py
-#CMD streamlit run ./src/app.py
+#CMD streamlit run --server.port $PORT ./src/app.py
+CMD streamlit run ./src/app.py
