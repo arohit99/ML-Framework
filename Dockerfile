@@ -23,5 +23,5 @@ WORKDIR /ProjectRootDir
 RUN pip install -r requirements.txt
 
 # Run the image
-#CMD streamlit run --server.port $PORT ./src/app.py
-CMD streamlit run ./src/app.py
+CMD streamlit run --server.port $PORT ./src/app.py
+#CMD streamlit run ./src/app.py

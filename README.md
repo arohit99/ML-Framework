@@ -20,3 +20,4 @@ $ docker run -it -p 8501:8501 --name MLApp app:latest
 ```
 
 check: http://localhost:8501/
+check: https://mlappframework.herokuapp.com

@@ -81,7 +81,7 @@ def main(logger,dataview,plotview,modelview):
         "Model Metrics": "model_metrics",
         "Make Predictions":"model_serving"
     }
-        st.title('Customer Churn model')
+        st.title('Customer Churn Analysis')
         st.sidebar.title('Navigation')
         selection = st.sidebar.radio("Go to", list(PAGES.keys()))
         page = PAGES[selection]
