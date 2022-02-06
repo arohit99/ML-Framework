@@ -2,7 +2,7 @@
 
 This project aims to build and deploy a machine learning app adhering to the best practises in the industry. The UI is build using streamlit, scikit-learn for machine learning, mlflow for tracking, matplotlib for plots, github actions to containerise the application and deploy to heroku. The app can be viewed [here](https://mlappframework.herokuapp.com). 
 
-Data scientists today frequently use notebook based environments to run experiments. While this facilitates rapid development, these are not efficient in production environment. This project builds upon concepts like OOPS, clean code, code modularisation (modules and packages), logging, config setting etc. The key steps in the development approach are:
+Data scientists today frequently use notebook based environments to run experiments. While this facilitates rapid development, these are not efficient in production environment. This project builds upon concepts like OOPS, clean code, code modularisation (modules and packages), logging, config setting etc. The key steps in the development approach were:
 
 * create an virtual environment and install dependencies using requirements.txt
 * explore data, run experiments using jupyter notebooks. However notebooks will not be used as part of final application package
@@ -38,4 +38,4 @@ $ heroku open
 
 ## Limitations
 
-Ideally, we would like to seperate out data cleaning, model development and serving activities. We would want to maintain a docker image specific to model serving atleast. For each of demonstration, I chose to have all code in one docker image.
+Ideally, we would like to seperate out data cleaning, model development and serving activities. We would want to maintain a docker image specific to model serving atleast. To help with demonstration, I chose to have all code in one docker image.
