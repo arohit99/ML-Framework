@@ -4,12 +4,8 @@ import seaborn as sns
 import pandas as pd
 from sklearn.metrics import roc_auc_score, accuracy_score, confusion_matrix, classification_report,plot_confusion_matrix
 from sklearn.model_selection import cross_val_score
-# import sys,os
-# from pathlib import Path
 plt.style.use('fivethirtyeight')
-#from src import library as lib
 from config import config as cf
-#import app as w
 
 
 class DataView:

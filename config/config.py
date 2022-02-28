@@ -21,7 +21,6 @@ with open(Path(CONFIG_PATH,'logs_config.yaml'), 'r') as f:
     config = yaml.safe_load(f.read())
     config['handlers']['info']['filename'] = os.path.join(PROJECT_PATH,LOGS_PATH,Path(config['handlers']['info']['filename']))
     config['handlers']['error']['filename'] = os.path.join(PROJECT_PATH,LOGS_PATH,Path(config['handlers']['error']['filename']))
-    #print(config)
     logging.config.dictConfig(config)
 
 logger = logging.getLogger("root")

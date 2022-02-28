@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import sys,os
 
+# create setup file to remove this dependency
 PROJECTPATH = 'C:\\Users\\rohit\\Downloads\\mh\\workspace\\ML-Framework'
 
 if PROJECTPATH not in sys.path:
@@ -12,7 +13,6 @@ from sklearn.model_selection import cross_val_score
 
 from pathlib import Path
 import logging
-#import library.components as lib
 from library.components import Data, Model
 from library.custom_preprocess import extract_features
 from config import config as cf
@@ -78,8 +78,7 @@ def main(logger,dataview,plotview,modelview):
         PAGES = {
         "Explore Data": "plots",
         "Data View": "data_view",
-        "Model Metrics": "model_metrics",
-        "Make Predictions":"model_serving"
+        "Model Metrics": "model_metrics"
     }
         st.title('Customer Churn Analysis')
         st.sidebar.title('Navigation')
